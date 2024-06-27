@@ -1,0 +1,3 @@
+require("ccf")
+
+print("hello")
