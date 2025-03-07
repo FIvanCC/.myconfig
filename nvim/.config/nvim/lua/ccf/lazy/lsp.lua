@@ -68,7 +68,7 @@ return {
 
 				-- Opens a popup that displays documentation about the word under your cursor
 				--  See `:help K` for why this keymap.
-				map("K", vim.lsp.buf.hover, "Hover Documentation")
+				map("gK", vim.lsp.buf.hover, "Hover Documentation")
 
 				-- WARN: This is not Goto Definition, this is Goto Declaration.
 				--  For example, in C this would take you to the header.
@@ -132,7 +132,7 @@ return {
 		--  - settings (table): Override the default settings passed when initializing the server.
 		--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 		local servers = {
-			-- clangd = {},
+			clangd = {},
 			-- gopls = {},
 			-- pyright = {},
 			-- rust_analyzer = {},

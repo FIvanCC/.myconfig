@@ -2,11 +2,14 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
+-- move the line up and down in v mode
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>')
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-print("inthe remap")
-print("Leader key is set to: [" .. vim.g.mapleader .. "]")
+-- print("inthe remap")
+-- print("Leader key is set to: [" .. vim.g.mapleader .. "]")
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
@@ -29,3 +32,4 @@ vim.keymap.set("n", "<leader>o", "A<Esc>o<Esc>", { desc = "go to the new line in
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 --neotree
 vim.keymap.set("n", "<C-T>", "<Cmd>Neotree toggle<CR>")
+vim.keymap.set("n", "<leader>t", "<Cmd>Fterminal<CR>")
