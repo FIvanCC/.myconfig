@@ -31,5 +31,8 @@ vim.keymap.set("n", "<leader>o", "A<Esc>o<Esc>", { desc = "go to the new line in
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 --neotree
-vim.keymap.set("n", "<C-T>", "<Cmd>Neotree toggle<CR>")
+vim.keymap.set("n", "<leader>tt", "<Cmd>Neotree float<CR>")
 vim.keymap.set("n", "<leader>t", "<Cmd>Fterminal<CR>")
+--tst
+vim.keymap.set("n", "<leader>ri", "<Cmd>TSToolsRemoveUnusedImports<CR>")
+vim.keymap.set("n", "<leader>si", "<Cmd>TSToolsSortImports<CR>")
